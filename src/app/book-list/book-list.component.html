@@ -9,15 +9,13 @@
         <th scope="col">Avability</th>
         <th scope="col">Update</th>
         <th scope="col">Delete</th>
-
-
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let book of books">
         <td>{{book.name}}</td>
         <td>{{book.year}}</td>
-        <td *ngIf="book.availability">availabile</td>
+        <td *ngIf="book.availability">available</td>
         <td *ngIf="!book.availability">borrowed</td>
         <td ><button type="button" (click)="updateBook(book)" class="btn btn-warning">Update</button></td>
         <td ><button type="button" (click)="deleteBook(book)" class="btn btn-danger">Delete</button></td>
