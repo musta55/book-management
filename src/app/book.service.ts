@@ -24,21 +24,24 @@ export class BookService {
     return this.books;
   }
   deleteBook(givenBook:Book):Book[]{
-    return this.books.filter(book => givenBook.id!= book.id);
+    this.books= this.books.filter(book => givenBook.id!= book.id);
+    return this.books;
   }
-  
+
   updateBook(givenBook: Book): Book[] {
 
     this.books = this.books.filter(book => givenBook.id != book.id);
     return this.books;
 
   }
-
+  
   getBookToBeUpdated(): Book {
     return this.bookToBeUpdated;
   }
-  setBookToBeUpdated(givenBook: Book) {
-    this.bookToBeUpdated = givenBook;
+
+  setBookToBeUpdated(givenBook: Book){
+    this.bookToBeUpdated=givenBook;
   }
+
 
 }

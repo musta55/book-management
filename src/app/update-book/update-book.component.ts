@@ -19,6 +19,9 @@ export class UpdateBookComponent implements OnInit {
   }
 
   backToBookList(){
+    this.route.navigate(['books'])
+  }
+  saveBookList(){
     this.route.navigate([''])
   }
 
